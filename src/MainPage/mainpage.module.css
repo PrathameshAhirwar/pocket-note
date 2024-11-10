@@ -1,0 +1,208 @@
+/* mainpage.module.css */
+
+.container{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    border: 1px solid;
+    height: 100%;
+}
+
+/* GroupList section */
+.groupList{
+    border: 1px solid;
+    padding: 5% 1%;
+    position: relative;
+   
+}
+
+/* GroupList list  */
+.listContainer {
+    height: 78vh;
+    overflow-y: auto;
+    padding-bottom: 60px;
+    
+  }
+
+.groupList ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .groupItem {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    gap: 15px;
+  }
+  
+  .groupIcon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+
+
+.btn {
+    height: 50px;
+    width: 50px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    position: sticky;
+    float: right;
+    bottom: 0;
+    margin-top: auto;
+    cursor: pointer;
+  }
+
+
+.groupList > .heading{
+    height: 5%;
+    /* border: 1px solid; */
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* NoteDisplay Section */
+.noteDisplay{
+    border: 1px solid;
+    background-color: #DAE5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.imgContainer > h1{
+    font-size: 50px;
+    padding: 2%;
+}
+
+.imgContainer > h4{
+    font-size: 20px;
+    padding: 0.5%;
+}
+
+.imgContainer > h6{
+    font-size: 15px;
+    margin-top: 10%;
+    align-self: center;
+}
+
+/* Responsive design */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .container {
+        grid-template-columns: 30% 70%;
+    }
+
+    .btn {
+        height: 45px;
+        width: 45px;
+    }
+
+    .imgContainer > h1 {
+        font-size: 40px;
+    }
+
+    .imgContainer > h4 {
+        font-size: 18px;
+    }
+
+    .noteDisplay > h6 {
+        font-size: 14px;
+    }
+}
+
+/* responsive for btn  */
+@media (max-width: 1024px) {
+    .btn {
+        position: absolute;
+        bottom: 10px; 
+        right: 10px; 
+        margin: 0; 
+    }
+}
+
+
+.popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+
+/* Mobile Responsiveness */
+@media (min-width: 320px) and (max-width: 425px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .groupList {
+    display: block;
+    flex: 1;
+  }
+
+  .noteDisplay {
+    display: none;
+    flex: 1;
+  }
+
+  
+  .noteDisplay.show {
+    display: block;
+  }
+
+  .groupList.hidden {
+    display: none;
+  }
+
+  .imgContainer {
+    display: none;
+  }
+
+  .popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+}
